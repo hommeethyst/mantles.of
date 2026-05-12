@@ -56,8 +56,6 @@ export const products: Product[] = [
     ],
   },
   {
-
-  {
     id: 3,
     name: 'Plaid Detail Distressed Jeans',
     category: 'Bottoms',
