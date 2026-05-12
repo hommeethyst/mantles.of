@@ -16,7 +16,7 @@ export default function ProductShowcase() {
               New Arrivals
             </p>
             <h2 className="text-3xl md:text-4xl font-bold text-mantles-content">
-              The Collection
+              Fall/Winter 29
             </h2>
           </div>
           <Link
