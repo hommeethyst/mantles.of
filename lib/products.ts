@@ -109,7 +109,7 @@ export const products: Product[] = [
       'MANTLES. leather patch on sleeve',
       'Ribbed cuffs and hem',
     ],
-    images: ['/satinpinkdepan.png', '/satinpinkbelakangg.png'],
+    images: ['/satinpinkdepan.png', '/satinpinkbelakang.png'],
 },
   {
     id: 6,
@@ -127,7 +127,7 @@ export const products: Product[] = [
       'MANTLES. leather patch on sleeve',
       'Ribbed cuffs and hem',
     ],
-    images: ['/satinbluedepan.png', '/satinbluebelakangg.png'],
+    images: ['/satinbluedepan.png', '/satinbluebelakang.png'],
 },
   {
     id: 7,
@@ -145,7 +145,7 @@ export const products: Product[] = [
       'MANTLES. leather patch on sleeve',
       'Ribbed cuffs and hem',
     ],
-    images: ['/satinbutterdepan.png', '/satinbutterbelakangg.png'],
+    images: ['/satinbutterdepan.png', '/satinbutterbelakang.png'],
   },
 ]
 
