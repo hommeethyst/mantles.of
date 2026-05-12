@@ -22,7 +22,7 @@ export default function Hero() {
               Shop Collection
             </Link>
             <Link href="/about" className="btn-secondary">
-              Our Story
+              Lookbook
             </Link>
           </div>
         </div>
