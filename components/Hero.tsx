@@ -12,7 +12,7 @@ export default function Hero() {
       aria-label="Hero"
     >
       {/* Overlay Gelap: Supaya teks putih tetap kontras dan gampang dibaca */}
-      <div className="absolute inset-0 bg-black/40 z-0"></div>
+      <div className="absolute inset-0 bg-black/10 z-0"></div>
 
       <div className="container-max w-full relative z-10">
         <div className="max-w-3xl">
