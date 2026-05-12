@@ -7,7 +7,6 @@ export const metadata: Metadata = {
   description: 'MANTLES. Fall/Winter 29 Lookbook collection.',
 }
 
-// --- BAGIAN INI YANG TADI KURANG ---
 // Ini membuat daftar 20 foto secara otomatis agar bisa dibaca oleh kode di bawah
 const photos = Array.from({ length: 20 }, (_, i) => ({
   id: i + 1,
