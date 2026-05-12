@@ -3,9 +3,16 @@ import Footer from '@/components/Footer'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'About — MANTLES.',
-  description: 'MANTLES. is built on the belief that true luxury is precision, not abundance. Learn our story.',
+  title: 'Lookbook — MANTLES.',
+  description: 'MANTLES. Fall/Winter 29 Lookbook collection.',
 }
+
+// Ini membuat daftar 20 foto secara otomatis agar bisa dibaca oleh kode di bawah
+const photos = Array.from({ length: 20 }, (_, i) => ({
+  id: i + 1,
+  src: `/lookbook/photo${i + 1}.jpg`, 
+  alt: `Lookbook Fall/Winter 29 - Item ${i + 1}`
+}))
 
 interface StatItem {
   label: string
@@ -27,38 +34,30 @@ export default function AboutPage() {
       <section className="section-padding pt-36 md:pt-48 border-b border-black/10">
         <div className="container-max">
           <p className="text-xs tracking-[0.3em] uppercase text-mantles-muted mb-6">
-            About Us
+            Lookbook
           </p>
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-mantles-content leading-tight tracking-tight text-balance max-w-3xl">
-            Crafted with intention.
+            Fall/Winter 29
           </h1>
         </div>
       </section>
 
-      {/* Story Section */}
+      {/* Gallery Section - Sekarang sudah bisa membaca data 'photos' di atas */}
       <section className="section-padding border-b border-black/10">
         <div className="container-max">
-          <div className="max-w-2xl">
-            <p className="text-base md:text-lg text-mantles-muted font-light leading-relaxed mb-8">
-              MANTLES. began with a single question: what does a wardrobe look like when built
-              with intention? Not assembled out of trend cycles and fast retail, but considered —
-              each piece chosen for what it does and how long it will do it.
-            </p>
-            <p className="text-base md:text-lg text-mantles-muted font-light leading-relaxed mb-8">
-              We design for the long run. Our collections are small on purpose. Every silhouette
-              is refined over months, every fabric sourced with care. We reject the noise of seasonal
-              fashion in favour of essentials that age with grace.
-            </p>
-            <p className="text-base md:text-lg text-mantles-muted font-light leading-relaxed mb-8">
-              The brand was founded in 2022 with a commitment to two things: exceptional quality and
-              radical restraint. We believe the best garment is the one you never need to replace.
-              That is the MANTLES. standard.
-            </p>
-            <p className="text-base md:text-lg text-mantles-muted font-light leading-relaxed">
-              Everything we make is produced in small runs, in workshops where the people who
-              make your clothes are paid fairly and work safely. Luxury, to us, includes knowing
-              where your clothes come from.
-            </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {photos.map((photo) => (
+              <div key={photo.id} className="relative aspect-[3/4] overflow-hidden bg-gray-100 group">
+                <img 
+                  src={photo.src} 
+                  alt={photo.alt}
+                  className="object-cover w-full h-full hover:scale-105 transition-transform duration-700 ease-in-out"
+                />
+                <div className="absolute bottom-2 left-2 text-[8px] text-black/20 font-mono">
+                  {photo.id.toString().padStart(2, '0')}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
