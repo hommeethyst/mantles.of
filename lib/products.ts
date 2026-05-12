@@ -106,7 +106,7 @@ export const products: Product[] = [
       'Heavyweight premium fleece lining',
       'Cropped boxy fit',
       'MANTLES. logo embroidered in cursive',
-      'MANTLES. leather patch on sleeve'
+      'MANTLES. leather patch on sleeve',
       'Ribbed cuffs and hem',
     ],
     images: ['/satinpinkdepan.png', '/satinpinkbelakang.png'],
@@ -124,7 +124,7 @@ export const products: Product[] = [
       'Heavyweight premium fleece lining',
       'Cropped boxy fit',
       'MANTLES. logo embroidered in cursive',
-      'MANTLES. leather patch on sleeve'
+      'MANTLES. leather patch on sleeve',
       'Ribbed cuffs and hem',
     ],
     images: ['/satinbluedepan.png', '/satinbluebelakang.png'],
@@ -142,7 +142,7 @@ export const products: Product[] = [
       'Heavyweight premium fleece lining',
       'Cropped boxy fit',
       'MANTLES. logo embroidered in cursive',
-      'MANTLES. leather patch on sleeve'
+      'MANTLES. leather patch on sleeve',
       'Ribbed cuffs and hem',
     ],
     images: ['/satinbutterdepan.png', '/satinbutterbelakang.png'],
