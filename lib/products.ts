@@ -56,7 +56,25 @@ export const products: Product[] = [
     ],
   },
   {
+
+  {
     id: 3,
+    name: 'Plaid Detail Distressed Jeans',
+    category: 'Bottoms',
+    price: 'Rp 2.150.000',
+    slug: 'plaid-detail-distressed-jeans',
+    color: 'Distressed Blue / Plaid',
+    desc: 'Mud wash distressed denim featuring intricate plaid fabric backpocket and custom hardware. Each pair is uniquely hand-finished.',
+    features: [
+      'Custom wool plaid backpocket',
+      'Hand-distressed mud finish',
+      'Baggy fit',
+      'Burgundy MANTLES. leather patch',
+    ],
+    images: ['/jeansdepan.png', '/jeansbelakang.png'],
+},
+  {
+    id: 4,
     name: 'Embossed Logo Long Sleeve Tee',
     category: 'Tops',
     price: 'Rp 950.000',
@@ -77,22 +95,6 @@ export const products: Product[] = [
       'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Belakang-SVvsK6JAHgymTQIb9cWuxKQhdJVSEz.png',
     ],
   },
-  {
-    id: 4,
-    name: 'Plaid Detail Distressed Jeans',
-    category: 'Bottoms',
-    price: 'Rp 2.150.000',
-    slug: 'plaid-detail-distressed-jeans',
-    color: 'Distressed Blue / Plaid',
-    desc: 'Mud wash distressed denim featuring intricate plaid fabric backpocket and custom hardware. Each pair is uniquely hand-finished.',
-    features: [
-      'Custom wool plaid backpocket',
-      'Hand-distressed mud finish',
-      'Baggy fit',
-      'Burgundy MANTLES. leather patch',
-    ],
-    images: ['/jeansdepan.png', '/jeansbelakang.png'],
-},
   {
     id: 5,
     name: 'Padded Angel Baby Hoodie',
