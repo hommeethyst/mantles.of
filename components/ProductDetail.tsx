@@ -2,12 +2,14 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import type { Product } from '@/lib/products'
 
 const sizes = ['XS', 'S', 'M', 'L', 'XL']
 
 export default function ProductDetail({ product }: { product: Product }) {
   const [selectedSize, setSelectedSize] = useState<string | null>(null)
+  const [selectedImage, setSelectedImage] = useState(0)
 
   return (
     <div className="pt-24 pb-0 px-6 section-padding">
@@ -27,32 +29,44 @@ export default function ProductDetail({ product }: { product: Product }) {
           <div className="flex flex-col gap-4">
             {/* Main image */}
             <div
-              className="aspect-[3/4] bg-mantles-bg border border-black/10 flex items-center justify-center"
-              aria-label="Product front view"
+              className="aspect-[3/4] bg-mantles-bg border border-black/10 overflow-hidden relative"
+              aria-label="Product main view"
             >
-              <span className="text-xs tracking-widest uppercase text-mantles-muted font-medium">
-                [Front]
-              </span>
+              <Image
+                src={product.images[selectedImage]}
+                alt={`${product.name} in ${product.color}`}
+                fill
+                className="object-cover object-center"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                priority
+              />
             </div>
             {/* Thumbnails */}
-            <div className="grid grid-cols-2 gap-4">
-              <div
-                className="aspect-[3/4] bg-mantles-bg border border-black/10 flex items-center justify-center"
-                aria-label="Product back view"
-              >
-                <span className="text-xs tracking-widest uppercase text-mantles-muted font-medium">
-                  [Back]
-                </span>
+            {product.images.length > 1 && (
+              <div className="grid grid-cols-3 gap-4">
+                {product.images.map((image, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setSelectedImage(index)}
+                    className={`aspect-[3/4] bg-mantles-bg border overflow-hidden relative transition-all duration-200 ${
+                      selectedImage === index
+                        ? 'border-mantles-content'
+                        : 'border-black/10 hover:border-black/30'
+                    }`}
+                    aria-label={`View image ${index + 1}`}
+                    aria-pressed={selectedImage === index}
+                  >
+                    <Image
+                      src={image}
+                      alt={`${product.name} view ${index + 1}`}
+                      fill
+                      className="object-cover object-center"
+                      sizes="(max-width: 768px) 33vw, 16vw"
+                    />
+                  </button>
+                ))}
               </div>
-              <div
-                className="aspect-[3/4] bg-mantles-bg border border-black/10 flex items-center justify-center"
-                aria-label="Product detail view"
-              >
-                <span className="text-xs tracking-widest uppercase text-mantles-muted font-medium">
-                  [Detail]
-                </span>
-              </div>
-            </div>
+            )}
           </div>
 
           {/* Right: Product Info */}
@@ -124,10 +138,10 @@ export default function ProductDetail({ product }: { product: Product }) {
             {/* Shipping / Returns */}
             <div className="border-t border-black/10 pt-6 space-y-3">
               <p className="text-xs text-mantles-muted font-light">
-                <span className="font-medium text-mantles-content">Free shipping</span> on orders over $300.
+                <span className="font-medium text-mantles-content">Free shipping</span> on orders over Rp 2.000.000.
               </p>
               <p className="text-xs text-mantles-muted font-light">
-                <span className="font-medium text-mantles-content">Free returns</span> within 30 days.
+                <span className="font-medium text-mantles-content">Free returns</span> within 14 days.
               </p>
               <p className="text-xs text-mantles-muted font-light">
                 Dry cleaning and care instructions included with each garment.

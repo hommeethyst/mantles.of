@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { products } from '@/lib/products'
@@ -38,11 +39,15 @@ export default function ShopPage() {
                 className="group block hover:opacity-80 transition-opacity duration-300"
                 aria-label={`${product.name} in ${product.color} — ${product.price}`}
               >
-                {/* Image Placeholder */}
-                <div className="aspect-[3/4] bg-mantles-bg border border-black/10 flex items-center justify-center mb-4">
-                  <span className="text-xs tracking-widest uppercase text-mantles-muted font-medium">
-                    [Image]
-                  </span>
+                {/* Product Image */}
+                <div className="aspect-[3/4] bg-mantles-bg border border-black/10 mb-4 overflow-hidden relative">
+                  <Image
+                    src={product.images[0]}
+                    alt={`${product.name} in ${product.color}`}
+                    fill
+                    className="object-cover object-center"
+                    sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
+                  />
                 </div>
                 {/* Info */}
                 <div className="space-y-1">
