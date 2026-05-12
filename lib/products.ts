@@ -51,6 +51,7 @@ export const products: Product[] = [
       'Burgundy MANTLES. leather label',
     ],
     images: [
+      'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/khakidepan.png-uEgMIMxt62eKc88LWwmMxiSIA9VNK0.jpeg',
       'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/khakidepan.png-VtRVoNjpldKwPI0xh59DE3AqhpJ1mK.jpeg',
     ],
   },
@@ -73,6 +74,7 @@ export const products: Product[] = [
     ],
     images: [
       'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Belakang-G42EQY84m7sd9w6lIAJEaPr8LkEmjH.png',
+      'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Belakang-SVvsK6JAHgymTQIb9cWuxKQhdJVSEz.png',
     ],
   },
 ]
