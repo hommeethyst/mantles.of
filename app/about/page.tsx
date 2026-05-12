@@ -27,10 +27,10 @@ export default function AboutPage() {
       <section className="section-padding pt-36 md:pt-48 border-b border-black/10">
         <div className="container-max">
           <p className="text-xs tracking-[0.3em] uppercase text-mantles-muted mb-6">
-            About Us
+            Lookbook
           </p>
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-mantles-content leading-tight tracking-tight text-balance max-w-3xl">
-            Crafted with intention.
+            Fall/Winter 29
           </h1>
         </div>
       </section>
