@@ -7,15 +7,12 @@ export const metadata: Metadata = {
   description: 'MANTLES. Fall/Winter 29 Lookbook collection.',
 }
 
-// Data foto model yang sudah disesuaikan dengan nama file kamu
-const photos = [
-  { id: 1, src: '/TheLaughable.png', alt: 'Look 01 - The Laughable' },
-  { id: 2, src: '/TheTomboy.png', alt: 'Look 02 - The Tomboy' },
-  { id: 3, src: '/TheMysterious.png', alt: 'Look 03 - The Mysterious' },
-  { id: 4, src: '/TheBimbo.png', alt: 'Look 04 - The Bimbo' },
-  { id: 5, src: '/TheRaver.png', alt: 'Look 05 - The Raver' },
-  { id: 6, src: '/TheNerd.png', alt: 'Look 06 - The Nerd' },
-]
+// Ini membuat daftar 20 foto secara otomatis agar bisa dibaca oleh kode di bawah
+const photos = Array.from({ length: 20 }, (_, i) => ({
+  id: i + 1,
+  src: `/lookbook/photo${i + 1}.jpg`, 
+  alt: `Lookbook Fall/Winter 29 - Item ${i + 1}`
+}))
 
 interface StatItem {
   label: string
@@ -45,19 +42,19 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Gallery Section */}
+      {/* Gallery Section - Sekarang sudah bisa membaca data 'photos' di atas */}
       <section className="section-padding border-b border-black/10">
         <div className="container-max">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {photos.map((photo) => (
-              <div key={photo.id} className="relative aspect-[3/4] overflow-hidden bg-gray-100 group shadow-sm">
+              <div key={photo.id} className="relative aspect-[3/4] overflow-hidden bg-gray-100 group">
                 <img 
                   src={photo.src} 
                   alt={photo.alt}
                   className="object-cover w-full h-full hover:scale-105 transition-transform duration-700 ease-in-out"
                 />
-                <div className="absolute bottom-4 left-4 text-[10px] text-black/30 font-mono tracking-widest uppercase">
-                  {photo.alt.split(' - ')[1]}
+                <div className="absolute bottom-2 left-2 text-[8px] text-black/20 font-mono">
+                  {photo.id.toString().padStart(2, '0')}
                 </div>
               </div>
             ))}
