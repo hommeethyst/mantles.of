@@ -36,13 +36,19 @@ export default function ProductShowcase() {
             >
               {/* Product Image */}
               <div className="aspect-[3/4] bg-mantles-bg border border-black/10 mb-4 overflow-hidden relative">
-                <Image
-                  src={product.images[0]}
-                  alt={`${product.name} in ${product.color}`}
-                  fill
-                  className="object-cover object-center"
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                />
+                {product.images.length > 0 ? (
+                  <Image
+                    src={product.images[0]}
+                    alt={`${product.name} in ${product.color}`}
+                    fill
+                    className="object-cover object-center"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                ) : (
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <span className="text-xs tracking-[0.2em] uppercase text-mantles-muted">Image</span>
+                  </div>
+                )}
               </div>
               {/* Info */}
               <div className="space-y-1">

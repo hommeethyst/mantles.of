@@ -32,14 +32,20 @@ export default function ProductDetail({ product }: { product: Product }) {
               className="aspect-[3/4] bg-mantles-bg border border-black/10 overflow-hidden relative"
               aria-label="Product main view"
             >
-              <Image
-                src={product.images[selectedImage]}
-                alt={`${product.name} in ${product.color}`}
-                fill
-                className="object-cover object-center"
-                sizes="(max-width: 768px) 100vw, 50vw"
-                priority
-              />
+              {product.images.length > 0 ? (
+                <Image
+                  src={product.images[selectedImage]}
+                  alt={`${product.name} in ${product.color}`}
+                  fill
+                  className="object-cover object-center"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  priority
+                />
+              ) : (
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <span className="text-xs tracking-[0.2em] uppercase text-mantles-muted">Image</span>
+                </div>
+              )}
             </div>
             {/* Thumbnails */}
             {product.images.length > 1 && (
