@@ -3,6 +3,9 @@ import Image from 'next/image'
 import { products } from '@/lib/products'
 
 export default function ProductShowcase() {
+  // Only show first 3 products (New Arrivals) on homepage
+  const newArrivals = products.slice(0, 3)
+
   return (
     <section className="section-padding bg-mantles-bg" aria-label="New Arrivals">
       <div className="container-max">
@@ -27,7 +30,7 @@ export default function ProductShowcase() {
 
         {/* Product Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6">
-          {products.map((product) => (
+          {newArrivals.map((product) => (
             <Link
               key={product.id}
               href={`/shop/${product.slug}`}
