@@ -109,7 +109,7 @@ export const products: Product[] = [
       'MANTLES. leather patch on sleeve'
       'Ribbed cuffs and hem',
     ],
-    images: ['/hoodiepink.png'], // Ganti nama file sesuai yang kamu upload
+    images: ['/satinpinkdepan.png', '/satinpinkbelakang.png'],
   },
   {
     id: 6,
