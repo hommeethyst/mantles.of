@@ -19,7 +19,7 @@ export default function ShopPage() {
       <section className="bg-mantles-surface pt-32 pb-12 px-6 border-b border-black/10">
         <div className="container-max">
           <p className="text-xs tracking-[0.3em] uppercase text-mantles-muted mb-3">
-            MANTLES. 2026
+            MANTLES.
           </p>
           <h1 className="text-4xl md:text-6xl font-bold text-mantles-content">Shop</h1>
           <p className="text-sm text-mantles-muted font-light mt-3">
