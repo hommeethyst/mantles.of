@@ -1,0 +1,65 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --mantles-bg: #F2F2F2;
+  --mantles-surface: #FFFFFF;
+  --mantles-content: #000000;
+  --mantles-muted: rgba(0, 0, 0, 0.6);
+  --radius: 0rem;
+}
+
+@theme inline {
+  --font-sans: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  --color-mantles-bg: var(--mantles-bg);
+  --color-mantles-surface: var(--mantles-surface);
+  --color-mantles-content: var(--mantles-content);
+  --color-mantles-muted: var(--mantles-muted);
+  --color-background: var(--mantles-bg);
+  --color-foreground: var(--mantles-content);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+}
+
+@layer base {
+  * {
+    @apply border-black/10 outline-black/20;
+    box-sizing: border-box;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: #F2F2F2;
+    color: #000000;
+    font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: -0.015em;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-block bg-mantles-content text-mantles-surface px-8 py-3 text-sm font-bold tracking-widest uppercase transition-opacity duration-200 hover:opacity-70;
+  }
+
+  .btn-secondary {
+    @apply inline-block border border-mantles-content text-mantles-content px-8 py-3 text-sm font-bold tracking-widest uppercase transition-opacity duration-200 hover:opacity-50;
+  }
+
+  .link-minimal {
+    @apply text-sm tracking-wide underline-offset-4 hover:underline transition-opacity duration-200 hover:opacity-60;
+  }
+
+  .section-padding {
+    @apply py-20 md:py-28 px-6;
+  }
+
+  .container-max {
+    @apply max-w-7xl mx-auto;
+  }
+}
