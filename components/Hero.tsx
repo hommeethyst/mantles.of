@@ -19,7 +19,7 @@ export default function Hero() {
           </p>
           <div className="flex flex-wrap gap-4">
             <Link href="/shop" className="btn-primary">
-              Shop Collection
+              Shop Now
             </Link>
             <Link href="/about" className="btn-secondary">
               Lookbook
