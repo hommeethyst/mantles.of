@@ -9,12 +9,12 @@ export const metadata: Metadata = {
 
 // Data foto model yang sudah disesuaikan dengan nama file kamu
 const photos = [
-  { id: 1, src: '/lookbook/TheLaughable.png', alt: 'Look 01 - The Laughable' },
-  { id: 2, src: '/lookbook/TheTomboy.png', alt: 'Look 02 - The Tomboy' },
-  { id: 3, src: '/lookbook/TheMysterious.png', alt: 'Look 03 - The Mysterious' },
-  { id: 4, src: '/lookbook/TheBimbo.png', alt: 'Look 04 - The Bimbo' },
-  { id: 5, src: '/lookbook/TheRaver.png', alt: 'Look 05 - The Raver' },
-  { id: 6, src: '/lookbook/TheNerd.png', alt: 'Look 06 - The Nerd' },
+  { id: 1, src: '/TheLaughable.png', alt: 'Look 01 - The Laughable' },
+  { id: 2, src: '/TheTomboy.png', alt: 'Look 02 - The Tomboy' },
+  { id: 3, src: '/TheMysterious.png', alt: 'Look 03 - The Mysterious' },
+  { id: 4, src: '/TheBimbo.png', alt: 'Look 04 - The Bimbo' },
+  { id: 5, src: '/TheRaver.png', alt: 'Look 05 - The Raver' },
+  { id: 6, src: '/TheNerd.png', alt: 'Look 06 - The Nerd' },
 ]
 
 interface StatItem {
